@@ -1,0 +1,168 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COLOUGRASS</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+  <script>
+    window.onload = function() {
+      document.body.classList.add('loaded_hiding');
+      window.setTimeout(function() {
+        document.body.classList.add('loaded');
+        document.body.classList.remove('loaded_hiding');
+      }, 1500);
+    }
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+          $('.scrollup').fadeIn();
+        } else {
+          $('.scrollup').fadeOut();
+        }
+      });
+      $('.scrollup').click(function() {
+        $("html, body").animate({
+          scrollTop: 0
+        }, 600);
+        return false;
+      });
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(function() {
+      var transTime = 10000;
+      var numBgColors = $('.bg-grad').length;
+      var bgtrans = setInterval(function() {
+        if ($('.bg-grad.active').index() == ($('.bg-grad').length - 1)) {
+          $('.bg-grad.active').removeClass('active');
+          $('.bg-grad').eq(0).addClass('active');
+        } else {
+          var curIndex = $('.bg-grad.active').index();
+          $('.bg-grad.active').removeClass('active');
+          $('.bg-grad').eq(curIndex + 1).addClass('active');
+        }
+      }, transTime);
+    });
+  </script>
+
+</head>
+<a href="#" class="scrollup">Наверх</a>
+
+<body>
+  <!-- Прелоадер -->
+  <div class="preloader">
+    <div class="preloader__image"></div>
+  </div>
+
+  <header>
+    <h2><a href="#"><img src="https://lh3.googleusercontent.com/WY6-EHuBxd2AcEsmUArApE5JEp_h_MEiAuJk7_BaYGoFB0h5dvqsHGzKOu6hwXAvHPb5-96sei0tTnsCCFiEHfs186DNI2LSMt-qC8lRIh8ntHs0uGtG3VRDcQBfZNoOob9nQTP3rIgXwnJSHaJnm9WpQS0qHVIGuSZpJz5bFJLScxAC4kn9S1ucqtj1gPtaVHL0OgMG2MvIdQJJHxs6j0v8_9i5IkLspoI0mJMtXGnmtwEOf1lVqEdpEWqZWhuXBc9fnYSo2eZO4vkOLJiZNc0EqISILyZHcC1ys2xVjkvqkYFQdsmrpf_N2OxLmOj2qfNDQyKqtBXle1i8nxDG-g6xW92vual4kplGy3JuL7Jm3gX5_H3OOT1DxHViRYYgDQUUTJK5UNMxMV75llxOG_TnrQP4BC75OQHJSrlEH1cbGQ3wNcH2vWnyjV9AqEty4V6wuBDWrAamWbbBVG11Ya2o745uNPuBUWsA4_7hgZa_a7jiI15V19zFjE02QLmJIIBpyUmrd7vGjLvTkN-VMkLNj8Jxqp-JY2KspzDYHAAft7lAvWUjR30vp9P4Pnezwx2udKyTfWcXmz8zbt9sKgptU8qY3N2yZIPvZdh9IktlDv9KhFKV-1fbEqueZDJTL8pJjpWbxxapr6-aHWj64S3NflNLQEngbDm1Vc-7uk7kzWWfV3_hka0K0TnKVySRnWPiJG2KFLhzGHSG72JgrsJPjRmcUND9J2KmOMiAMlPIX1DSDqxIZTOplw=w1858-h166-no?authuser=0" width="200" height="20"></a></h2>
+    <nav>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#portfolio">Портфолио</a></li>
+      <li><a href="#osobennosti">Особенности</a></li>
+      <li><a href="#klient">Отзывы</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="bg-wrapper">
+      <div class="bg-grad one"></div>
+      <div class="bg-grad two"></div>
+      <div class="bg-grad three active"></div>
+    </div>
+    <h1><img src="https://lh3.googleusercontent.com/MmzYvI7uEUwNRlzK8XxzD_Cau69ej4n9R1ZrpPM-VX-vamuYLTGQDzb30xyC1C6HNJahoXfGpSqwvtojBklzINWuuQMMiqSde-OtTpTEinyqKvDNTHO868xBlIdZLihpDg_fGB-JzOV0kYATEOF4oTz0XylZVPUK234id65A03qopLgsLoxvA_O7HuvMBMr0SfRdk1L-oOFTSIIaOADxg7taIVZ44RfNC91-2tOPSKMwvpVgLC4zturjUTDnDTODEnv4bN4JZXP8ItKs12j3fuFSDM2OHrgz-hhM41S4lCv3BPdeRpmLrPJvR0bjAQFiVi5bLGTi94dbty6EIrFezcRnTDAPv2uwPcc6o99g48hceYdWW-j1DSB9jiBsJE5mhU1Bow4Y6-xewWP0qNEIRIN-eLdlM0HwhUO4BbxXcOJqm9c5SZw8PAq5BDv_9z2svxe6VX4g0MilreJUqfnAqYy2g0Nd2M3X_z2_xOslue4gbbUdgZx7ok4CPYKEoEG6twB-nyVEsBd9N5rqmgM4jALDJYLuGyB2E6DsZ-3JDecrJ9y_Ar0KaG_cDM87t8JULCcCtXE8N396V9ZJtOiSmnEsce3J9Q7BhcEhFO8BKImGlryhKWtTMAqqiTYtp5hl9W96eIvZXOIw3e_JcqzEJtpwd2KL8doXfZObVWjE9HX1-ig6nGs1UJvjeH-4GOcLAy5QabHZfpT0nuA1dLz3F-lFEQnYLnMsyvpR1KCMnVkiOMH6WSBeQot06A=s1009-no?authuser=0" width="288" height="288"></img></h1>
+    <div width=100%>
+      <h1><img src="https://lh3.googleusercontent.com/WY6-EHuBxd2AcEsmUArApE5JEp_h_MEiAuJk7_BaYGoFB0h5dvqsHGzKOu6hwXAvHPb5-96sei0tTnsCCFiEHfs186DNI2LSMt-qC8lRIh8ntHs0uGtG3VRDcQBfZNoOob9nQTP3rIgXwnJSHaJnm9WpQS0qHVIGuSZpJz5bFJLScxAC4kn9S1ucqtj1gPtaVHL0OgMG2MvIdQJJHxs6j0v8_9i5IkLspoI0mJMtXGnmtwEOf1lVqEdpEWqZWhuXBc9fnYSo2eZO4vkOLJiZNc0EqISILyZHcC1ys2xVjkvqkYFQdsmrpf_N2OxLmOj2qfNDQyKqtBXle1i8nxDG-g6xW92vual4kplGy3JuL7Jm3gX5_H3OOT1DxHViRYYgDQUUTJK5UNMxMV75llxOG_TnrQP4BC75OQHJSrlEH1cbGQ3wNcH2vWnyjV9AqEty4V6wuBDWrAamWbbBVG11Ya2o745uNPuBUWsA4_7hgZa_a7jiI15V19zFjE02QLmJIIBpyUmrd7vGjLvTkN-VMkLNj8Jxqp-JY2KspzDYHAAft7lAvWUjR30vp9P4Pnezwx2udKyTfWcXmz8zbt9sKgptU8qY3N2yZIPvZdh9IktlDv9KhFKV-1fbEqueZDJTL8pJjpWbxxapr6-aHWj64S3NflNLQEngbDm1Vc-7uk7kzWWfV3_hka0K0TnKVySRnWPiJG2KFLhzGHSG72JgrsJPjRmcUND9J2KmOMiAMlPIX1DSDqxIZTOplw=w1858-h166-no?authuser=0" height="87" width="980"></img></h1>
+    </div>
+    <h3>Покраска травы в Минске.</h3>
+  </section>
+
+  <section class="our-work" id="portfolio">
+    <h3 class="title">Портфолио</h3>
+    <hr>
+
+    <ul class="grid">
+      <li class="small" style="background-image: url(https://homebusiness.ru/wp-content/uploads/2017/10/1912-ht2.jpg);"></li>
+      <li class="large" style="background-image: url(https://avatars.mds.yandex.net/get-direct/1550788/LFWEWv4uF4qET-fRm9S_Pg/wx600);"></li>
+      <li class="large" style="background-image: url(https://static.moydom.ru/st1/1200/zgljbqn4/147065045957a8585b98817.jpg);"></li>
+      <li class="small" style="background-image: url(https://topru.org/wp-content/uploads/2015/05/plen680-e1488306393833.jpg);"></li>
+      </div>
+  </section>
+
+  <section class="features" id="osobennosti">
+    <h3 class="title">Особенности</h3>
+    <p>Вы давно искали экспертов в покраске травы? Поздравляем, вы их нашли! Мы постарались вкратце описать особенности нашей компании, для того чтобы у вас не было сомнений в выборе.
+    <p>Ваша трава - наша забота!</p>
+    <hr>
+
+    <ul class="grid">
+      <li>
+        <i><img src="https://lh3.googleusercontent.com/f9OO3E_6YKQPXXBgNZssfeJl2smDGtj12vmUUaI34SJcW443QA-VXqRjY719mW9W2qE0xdfJY-ue3q9PD1tWGc1a9WFuD5vbaKYjEiriBDMws8lnDfvdI_ktELIHw-fzlE8B8tU0QPlP3zB7cuUXR1tL-d9LTv3-ZRkq4xyUboz-LKW2diak4vNwSx_XfHNiJXiq9c9J8gzh7lbf6HE_Ea4q9YNnL_iLQesshafO5C7nJYHBrnkSF1iHgMtXwcBE57B-fCfHTUANEq2QaEdduPEDNtU4__MS9pjFIKHboPooj9aKpCZXATANDlh94WUB65vlMR4yyPJhbKMfgtqyb9ierNJjRaDYd_K2iy55aOVhz5LRAtFDxYGYah63_aaUCvLhkk74qYtZ9K0EKCNiEn8g7wEesWWNFG2GcaqZnPxPTJzbeTpA5jjEv_XhAU-w9RkJ36lONWppCfwCTQvQ1kwt8FaSMoDdk5SA1uzMfeVrP0Ls8WmHrV6BFawsxuiVFKi5dH4bJPRdYnxSHsL65Eno7YR2z9xtw_J2jQUMAibur9bcksHCfDC5UU9oxO1QZTBk1Ipe5IBpvCMKbYOsn9eO0s9z6fLEGk4bVZK4GGdT8Z_e4hTaEUccwQ8HmKNRH2-uQGa_-ujWPtSNu0VEG6slaljC2dhLd9uujl5OUP3x89V9LiPlY5UziUTIF6m-J6fOaSatMYa9r0W3sTAmiFYykI283NtAkKHLlKSuzSkM6ogVNHwYFUf9Fg=w433-h449-no?authuser=0" width=60px height=60px></img></i>
+        <h4>Немецкая краска</h4>
+        <p>Мы используем только премиальные немецкие краски Feuchtfröhlich Hüftgold в нашей работе.</p>
+      </li>
+      <li>
+        <i><img src="https://lh3.googleusercontent.com/DPyqENbonX7Uv-WbNf3XNw8oEFhcn2fLmqc_397W8FGcQ6lp-AF76i_OR69qzuuVluvf1UymtPIH5G5nMFS6_kftqY9R1kfXkZ0j316vUe1CbdQe7IND4Ljz0eF3hvHmYN4PKNcaRszwF4E5cJPvVwCfdrdmGTT0f7ZScNYQe9p0sV3-yfa9fzkKOaMl89lZF4sdi4Tma_ENgQa3_qwGjvs7xwAgz4-FolS5efoVnLy603GWrBCk_jYGPxcXGZXgvX8-9ozrEGzaTm6Kvlj03Z3PpuqwXMuKDlh88-TdSq4YqNF8woWIbPxOL5D7GqZCoYrurj0Feis1BPrjp6UCopj0vm4LRC7hAo2U5Ih6hGQBr0ZoITxlQaUPZf5GZRzC2dnapBAn321UixrCrsHedSM78oH1WQgkuNhTP6FkDiLiaKFSY29VseuamDC52vH0ez7KrfJgd2Z2eEFU3os7BFWNayBAr7ZrxvM5YyrgJPxdC6duBq4EA7K9bmObaqv375jx4RRUSN9rqxL0RDFnHTsc_M7dX2HgCL3_rJxH3sMei9dHT7i86ySGTGw3fQmoPO2r2W7SfBFAhqz-alSmQEegmGkTz9Nu7xMiGIXaT05zRm_mifT1VS6x7ezupN5H-M8F5rQuTcWxF9wnAvUayVwuSRzRbeLMttR24qTq3I6CK8TMSPJAQwRXlNyGb0Wzmv-in5iUrMp8PTxSfx6dn68ck_eXqgBbzX2AiRKyZ63rt2JOW8I7J4MtFA=w250-h251-no?authuser=0" height=60px></img></i>
+        <h4>Голландское оборудование</h4>
+        <p>Оборудование фирмы Gras Verfmachine позволяет нам работать быстро и аккуратно.</p>
+      </li>
+      <li>
+        <i><img src="https://lh3.googleusercontent.com/vFQd1gOqwi7nz9EhuY80Q5Hcnl8OR0ZZO8bAWi03uxnWEiHJiqBlkAuI3ZhfRi_F2a_yGR2WX0gF0-lCX579ls66L125ynQMnFBHhgvyE1OsnxVjMyl6FfW4RRDVk7Rur0ZC5AZJxWfpqmYJ2HTaMvkdUkiLQ-EQXf65z7SkvoUCK1wvPzUWnPJEnSGl1DU1K2l4X42Q2bcAgKnXgwKkDvl45fraCz4XBeVN6XB1J3fUH4rYopgt7cNCx-i3VSOBo7OrsTBussN9hfjAkWfU_O8bl284vu_Fehd74-E0tqVD-gm4cCPVpFyM9hWyK0wpIxg2LfJaBKMqLHCw6OjpyioeLceD5gDkY1GNq7zNR6tYSoUdslFtnxV2Ad45qRFg9Ey0_9BGQQPKd0DVpM7LF7ofooiM7uI3Igm2_otQO5_IsLxWWq6Wu2Gnj2CvyuBC-QO3KawvXa1NjqAzQfvUdbviFhrxl7477PysSXQ-W-Oyc7hjK8oyb1kPOz61Qq-4HpmD-KdvCqvqc86I1g3pvaYoL6-2roD0u0oteyM2REXhwA3hVQCoUzwniyaYLNSBKRm3CpQ7GGlXf59sxzbTlsqkXsnAcK-iWTI1Ys7hix2oTy8PMjSJVVRrtlOuEavoIpyUBTjJgO_UlDXDwDTW4mKECuOLvVXGAaRMUTTFWjGx3pnH88NKGkDVrQuspeuZrruTS3jURDBXiOqZRlFxxAPt4QXLpkS9ftGcIW8NfBUt_n4pQHkaWzLwzg=s474-no?authuser=0" width=60px height=60px></img></i>
+        <h4>Австрийская технология</h4>
+        <p>Австрийская технология Leichenfledderer сокращает время покраски до минимума.</p>
+      </li>
+      </div>
+  </section>
+
+  <section class="reviews" id="klient">
+    <h3 class="title">Что говорят наши клиенты:</h3>
+
+    <p class="quote">Банальные выводы, некоторые особенности внутренней политики будут объявлены нарушающими нормы морали.</p>
+    <p class="author">— Никита Безушко</p>
+
+    <p class="quote">Богатый опыт говорит нам, что развитие, а также свежий взгляд на вещи - открывает новые горизонты для рассуждений.</p>
+    <p class="author">— Евгений Мишкевич</p>
+
+    <p class="quote">Прежде всего, высококачественный прототип будущего проекта позволяет оценить значение системы массового участия.</p>
+    <p class="author">— Кирилл Гирель</p>
+
+  </section>
+
+  <section class="contact" id="contacts">
+    <h3 class="title">Как с нами связаться?</h3>
+    <p class="foottext1">colougrassminsk@grass.cut <br>+375 (29) 777-77-77<br>+375 (44) 777-77-77</p>
+    <hr>
+    <p class=foottext2>
+      Звоните в любое время. Мы всегда готовы ответить на ваши вопросы.</p>
+  </section>
+
+  <footer>
+    <ul>
+      <li><a href="https://twitter.com/elonmusk/status/1005537267912400896?ref_src=twsrc%5Etfw"><i class="fa fa-twitter-square"></i></a></li>
+      <li><a href="https://instagram.com/romerto_carlos"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="https://www.pinterest.com/pin/westcoast--292874781987058665/"><i class="fa fa-pinterest-square"></i></a></li>
+    </ul>
+    <p>© Варига Р.В., 0000-9999 Все права защищены. Перепечатка и цитирование материалов запрещены.</p>
+    <p>По всем вопросам пишите на почтовый ящик <a href="mailto:roman.variga@yandex.ru">roman.variga@yandex.ru</a></p>
+  </footer>
+
+</body>
+
+</html>
